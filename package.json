@@ -1,0 +1,17 @@
+{
+  "name": "example-server",
+  "version": "1.0.0",
+  "description": "Example server built in NodeJS, ExpressJS and GraphQL in order to run with a simple client.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christian Sánchez Ruiz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1"
+  }
+}
