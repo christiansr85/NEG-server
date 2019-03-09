@@ -1,14 +1,14 @@
 const peopleData = require('../../../resources/data/people.json');
 
-const getPerson = function(args) {
+const person = function(args) {
   var id = args.id;
   return peopleData.filter(person => {
     return person.id == id;
   })[0];
 };
 
-const getPeople = function(args) {
-  if (args.topic) {
+const people = function(args) {
+  if (args.name) {
     var name = args.name;
     return peopleData.filter(person => person.name === name);
   } else {
@@ -17,6 +17,6 @@ const getPeople = function(args) {
 };
 
 module.exports = {
-  getPerson,
-  getPeople
+  person,
+  people
 };
