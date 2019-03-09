@@ -1,4 +1,4 @@
-# NEG-server
+# express-graphql-server
 
 The goal of this repo is just to provide a very simple server built with Express.js and GraphQL in order to serve a query example. This can be consumed by any app which implements a graphQL client.
 
