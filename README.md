@@ -20,6 +20,10 @@ If you want to modify anything, you can excute instead
 
 in order to keep the server listening while you write your code.
 
+It will deployed, by default, in `http://localhost:4000/graphql`. You can customize the port where it is listening throug `PORT` environment (`dotenv` is already installed, so you can define your environment variable in a `.env` file.).
+
+The graphic interface to test queries is also present under the same url.
+
 # Schemas
 
 If you are going to use this server, you should know the schema it offers.
