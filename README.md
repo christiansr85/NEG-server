@@ -40,6 +40,8 @@ type Person {
 }
 ```
 
+## Queries
+
 And also, the query definition to ask for people. Here I've added two queries: one to get a person from its `id` and another one which gets the complete list of people and lets you also to filter by exact `name` property.
 
 ```
