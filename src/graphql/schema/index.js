@@ -1,16 +1,7 @@
-const { buildSchema } = require('graphql');
+const path = require('path');
+const { fileLoader, mergeTypes } = require('merge-graphql-schemas');
 
-// GraphQL schema
-const schema = buildSchema(`
-type Query {
-    person(id: Int!): Person
-    people(name: String): [Person]
-},
-type Person {
-    id: Int
-    name: String
-    age: Int
-}
-`);
+const typesArray = fileLoader(path.join(__dirname, './types'));
+const schema = mergeTypes(typesArray, { all: true });
 
 module.exports = schema;

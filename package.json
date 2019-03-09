@@ -10,12 +10,20 @@
   },
   "author": "Christian Sánchez Ruiz",
   "license": "ISC",
+  "keywords": [
+    "Node",
+    "Express",
+    "Graphql",
+    "Apollo",
+    "API"
+  ],
   "dependencies": {
+    "apollo-server-express": "^2.4.8",
     "express": "^4.16.4",
     "express-graphql": "^0.7.1",
     "graphql": "^14.1.1",
-    "graphql-tools": "^4.0.4",
-    "merge-graphql-schemas": "^1.5.8"
+    "merge-graphql-schemas": "^1.5.8",
+    "qs-middleware": "^1.0.3"
   },
   "devDependencies": {
     "dotenv": "^6.2.0",

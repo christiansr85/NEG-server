@@ -1,26 +1,21 @@
 require('dotenv').config();
 const express = require('express');
-const express_graphql = require('express-graphql');
+const { ApolloServer, gql } = require('apollo-server-express');
 
-const schema = require('../graphql/schema');
-const resolvers = require('../graphql/resolvers');
+const graphqlConf = require('../graphql');
 
 const PORT = process.env.PORT || 4000;
 // Create an express server and a GraphQL endpoint
 const app = express();
-app.use(
-  '/graphql',
-  express_graphql({
-    schema: schema,
-    rootValue: resolvers,
-    graphiql: true
-  })
-);
+const server = new ApolloServer(graphqlConf);
+server.applyMiddleware({ app });
 
 const init = () => {
   app.listen(PORT, () =>
     console.log(
-      `Express GraphQL Server Now Running On localhost:${PORT}/graphql`
+      `Express GraphQL Server Now Running On localhost:${PORT}${
+        server.graphqlPath
+      }`
     )
   );
 };
